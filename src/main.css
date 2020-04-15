@@ -1,0 +1,45 @@
+/*font families
+Text font-family: 'Crimson Text', serif;
+H2   font-family: 'Permanent Marker', cursive;
+H1   font-family: 'Pacifico', cursive;
+
+colors
+yellow #F8D418
+black  #000000
+mint   #87F69C
+*/
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-family: 'Crimson Text', serif;
+  color: #ffffff;
+}
+body {
+    background-color: black;
+    align-items: center;
+}
+
+h1 {
+  color: #ffffff;
+  font-family: 'Pacifico', cursive;
+  font-weight: 700;
+  font-size: 1.5em;
+  padding: 2%;
+  align-items: center;
+}
+
+h2 {
+  color: #87F69C;
+  font-family: 'Permanent Marker', cursive;
+  font-weight: 700;
+  font-size: 1.25em;
+  padding: 2%;
+  align-items: center;
+}
+
