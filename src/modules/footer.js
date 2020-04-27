@@ -8,4 +8,3 @@ class Footer {
 }
 
 //  Variable with new footer
-export const footerText = new Footer('Random Lunch Generator', 'Last updated 04.14.2020');
