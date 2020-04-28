@@ -61,5 +61,5 @@ foodArray[0]mealDescription,
 //randomize the array, use innerHTML method to add first item each click
 function myFunction1() {
     foodArray.sort(function (a, b) { return 0.5 - Math.random() });
-    document.getElementById("entree").innerHTML = entree;
+    document.getElementById("foodArray").innerHTML = foodArray;
 }
