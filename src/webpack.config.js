@@ -6,10 +6,23 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: [
+          "style-loader", "css-loader"
+        ]
       },
-    ],
-  },
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/'
+            }
+          }
+        ]
+      },
+      
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),

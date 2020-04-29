@@ -63,3 +63,13 @@ function myFunction1() {
     foodArray.sort(function (a, b) { return 0.5 - Math.random() });
     document.getElementById("foodArray").innerHTML = foodArray;
 }
+
+hello = () => {
+    document.getElementById("demo").innerHTML += this;
+}
+
+//The window object calls the function:
+window.addEventListener("load", hello);
+
+//A button object calls the function:
+document.getElementById("btn").addEventListener("click", hello);
