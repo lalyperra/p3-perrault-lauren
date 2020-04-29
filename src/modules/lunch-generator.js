@@ -2,7 +2,7 @@
 //entree.sort(); will go alphabetically
 class lunchGenerator {
     constructor (){
-        lunchArray = [
+        this.lunchArray = [
         {
             mealTitle: 'Peanut Butter and Jelly',
             mealImage: 'images/pbj.jpg',
@@ -53,9 +53,12 @@ class lunchGenerator {
             mealImage: 'images/tacos.jpg',
             mealDescription: 'Chicken tacos with salsa and sour cream'
         },
-    }
+        ];
+        
+        this.footerText = this.lunchArray;
 
-    sorting() {
+    }
+    sorting(lunchItems) {
         for(let i = this.lunchArray.length-1; i > 0; i--){
             const j = Math.floor(Math.random() * 1)
             const k = this.lunchArray[i]
@@ -66,27 +69,19 @@ class lunchGenerator {
 
     addText() {
         window.onload = ()=> {
-            document.getElementById('button').addEventListener('click', this.sorting);
-            mealTitle.innerHTML = this.lunchArray[0].mealTitle;
-            }
+            document.getElementById('button').addEventListener('click', () => {
+                    this.sorting();
+            },
+                document.getElementById('mealTitle').innerHTML = this.lunchArray[0].mealTitle,
+                document.getElementById('mealDescription').innerHTML = this.lunchArray[0].mealDescription,
+                document.getElementById('mealImage').src = this.lunchArray[0].mealImage,
+                return this.lunchArray;
+            };
         }
 }
+
+addFooterText() 
 
 export const lunchGenerator = new LunchGenerator();
 
 
-/*randomize the array, use innerHTML method to add first item each click
-function myFunction1() {
-    foodArray.sort(function (a, b) { return 0.5 - Math.random() });
-    document.getElementById("foodArray").innerHTML = foodArray;
-}
-
-hello = () => {
-    document.getElementById("demo").innerHTML += this;
-}
-
-//The window object calls the function:
-window.addEventListener("load", hello);
-
-//A button object calls the function:
-document.getElementById("btn").addEventListener("click", hello);
